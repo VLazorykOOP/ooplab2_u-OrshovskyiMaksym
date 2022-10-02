@@ -4,7 +4,20 @@ using namespace std;
 
 int main()
 {
-	//Lab №2 
+	//Lab №2 task 4
+	int r, x, y, r1;
+	cout << "Input x: ";
+	cin >> x;
+	cout << "Input y: ";
+	cin >> y;
+	r = ((y << 4) + (y << 2) - ((x << 7) - (x << 3)) >> 5) + ((x + (y << 5)) >> 7) + ((x + y) >> 4);
+
+	r1 = (20 * y - x * 120) / 32 + (x + y * 32) / 128 + (x + y) / 16;
+
+	cout << "Result (without multiplication) = " << r << "\nResult = " << r1 << "\nx = " << x << "\ny = " << y << endl;
+	return 0;
+
+	/*Lab №2
 
 	int a, b, x, d, c, y;
 	int r, r1;
@@ -23,6 +36,6 @@ int main()
 	y = 37 * b + (((d * 31) + (12 * a)) / 2048) - (65 * c) + d * 14;
 
 	cout << "Result (without multiplication) = " << x << "\nResult = " << y << "\na=" << a << "; b=" << b << "; c=" << c << "; d=" << d << ";" << endl;
-	return 0;
+	return 0;*/
 }
 

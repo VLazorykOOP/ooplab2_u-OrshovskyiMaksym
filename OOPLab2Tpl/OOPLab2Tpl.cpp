@@ -1,38 +1,28 @@
-﻿// OOPLab2Tpl.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
+#include <clocale>
 using namespace std;
-#include "Tasks.h"
-#include "Examples.h"
 
-
-/// @brief 
-/// @return 
 int main()
 {
-    cout << "OOP. Template for laboratory work #2.\n";
+	//Lab №2 
 
-    char ch = '5';
-    do {
-        system("cls");
-        MenuTask();
-        ch = cin.get();
-        
-        cin.get();
+	int a, b, x, d, c, y;
+	int r, r1;
+	cout << "Input a: ";
+	cin >> a;
+	cout << "Input b: ";
+	cin >> b;
+	cout << "Input c: ";
+	cin >> c;
+	cout << "Input d: ";
+	cin >> d;
 
-        switch (ch) {
-        case '1': task1();   break;
-        case '2': task1();   break;
-        case '3': task1();   break;
-        case '4': task1();   break;
-		case '5':  Examples(); break;
-		case '6': return 0;
-	    }
-        cout << " Press any key and enter\n";
-        ch = cin.get();
-    } while (ch != '6');
 
-    return 0;
+	x = b + (b << 1) + (b << 1) + (b << 5) + (((d << 5) - d + (a << 3) + (a << 2)) >> 11) - ((c << 6) + c) + (d << 4) - (d << 1);
+
+	y = 37 * b + (((d * 31) + (12 * a)) / 2048) - (65 * c) + d * 14;
+
+	cout << "Result (without multiplication) = " << x << "\nResult = " << y << "\na=" << a << "; b=" << b << "; c=" << c << "; d=" << d << ";" << endl;
+	return 0;
 }
 

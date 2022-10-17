@@ -24,16 +24,7 @@ void task2()
     // Шифрування даних з використання побітових операцій 
     // Data encryption using bitwise operations
     cout << " Data encryption using bitwise operations  \n";
-
-}
-
-void task3()
-{
-    
-    // Шифрування даних з використання стуктур з бітовими полями 
-    // Data encryption using structures with bit fields
-    cout << "  Data encryption using structures with bit fields \n";
-    using namespace std;
+ using namespace std;
     void Shifruvanna(char S[128], unsigned short R[128])
     {
         unsigned char a;
@@ -71,6 +62,16 @@ void task3()
                 cout << hex << R[i] << endl;
             return 0;
         }
+}
+}
+
+void task3()
+{
+    
+    // Шифрування даних з використання стуктур з бітовими полями 
+    // Data encryption using structures with bit fields
+    cout << "  Data encryption using structures with bit fields \n";
+    
 }
     
 

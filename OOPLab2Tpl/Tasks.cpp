@@ -80,6 +80,18 @@ void task4()
 {   // Задача із використання побітових операцій
     // The problem of using bitwise operations
     cout << " Data encryption using structures with bit fields \n";
+   int main()
+    {
+        int r, x, y, r1;
+	cout << "Input x: ";
+	cin >> x;
+	cout << "Input y: ";
+	cin >> y;
+	r = ((y << 4) + (y << 2) - ((x << 7) - (x << 3)) >> 5) + ((x + (y << 5)) >> 7) + ((x + y) % 4);
+	r1 = (20 * y - x * 120) / 32 + (x + y * 32) / 128 + (x + y) % 16;
+	cout << "Result (without multiplication) = " << r << "\nResult = " << r1 << "\nx = " << x << "\ny = " << y << endl;
+	return 0;
+    }
 
 }
 

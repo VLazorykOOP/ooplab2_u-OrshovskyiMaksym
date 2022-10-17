@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <clocale>
 using namespace std;
 #include "Tasks.h"
 #include "Examples.h"
@@ -28,10 +29,50 @@ void task2()
 
 void task3()
 {
+    
     // Шифрування даних з використання стуктур з бітовими полями 
     // Data encryption using structures with bit fields
     cout << "  Data encryption using structures with bit fields \n";
+    using namespace std;
+    void Shifruvanna(char S[128], unsigned short R[128])
+    {
+        unsigned char a;
+        unsigned short b = 0, c = 0, i, t;
+        short j;
+        cin.get(S,128);
+        for (i = 0; i < 128; i++){
+            a=S[i];
+            t=a;
+            b |= t >> 4;
+            b |= i << 4;
+            t = a;
+            b |= t << 11;
+            t = 1;
+            for(j = 0; j < 16; j++)
+            {
+                if(b & t){
+                    if (c == 0) c = 1; else c = 0;
+                }
+        t <<=1;
+            }
+            b |= c << 15;
+            R[i] = b;
+    }
+        
+        int main()
+        {
+            cout << "Input text: "
+            char S[128];
+            unsigned short R[128];
+            unsigned short i;
+            cin.get(S, 128);
+            Shifruvanna(S,128);
+            for (i = 0; i < 128; i++)
+                cout << hex << R[i] << endl;
+            return 0;
+        }
 }
+    
 
 
 void task4()

@@ -84,6 +84,11 @@ void task2()
         }
 }
 }
+struct TextCode {
+	unsigned short schkb	: 4;
+	unsigned short posrow	: 7;
+	unsigned short bitp	: 1;
+	unsigned short mchkb	: 4;
 
 void task3()
 {
@@ -91,6 +96,19 @@ void task3()
     // Шифрування даних з використання стуктур з бітовими полями 
     // Data encryption using structures with bit fields
     cout << "  Data encryption using structures with bit fields \n";
+	unsigned char c;
+	unsigned short r, t, i;
+	short j;
+	for (i = 0; i < 64; i++)            //
+	{
+		c = InS[i];                     // s - 0x73 = 0111 0011
+		OutCoding[i].schkb = c >> 4;
+		OutCoding[i].mchkb = c & 0x0f;
+		OutCoding[i].posrow = i;
+		r = pbit(c);
+		t = pbit(static_cast<unsigned char>(i));
+		OutCoding[i].bitp = r^t;
+	}
     
 }
     
